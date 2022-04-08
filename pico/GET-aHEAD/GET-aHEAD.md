@@ -1,3 +1,5 @@
+# GET aHEAD
+
 First, after navigating to mercury.picoctf.net:21939, I inspected the HTML for
 both of the visible buttons and analysed the following HTML:
 
