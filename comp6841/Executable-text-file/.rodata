@@ -1,0 +1,13 @@
+
+intro:     file format elf64-x86-64
+
+
+Disassembly of section .rodata:
+
+0000000000402000 <.rodata>:
+  402000:	2f                   	(bad)  
+  402001:	64 65 76 2f          	fs gs jbe 0x402034
+  402005:	6e                   	outsb  %ds:(%rsi),(%dx)
+  402006:	75 6c                	jne    0x402074
+  402008:	6c                   	insb   (%dx),%es:(%rdi)
+	...
