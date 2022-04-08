@@ -37,7 +37,7 @@ responsible for other fields such as width, height, etc. I used Wikipedia's ['Ex
 to compare the header bytes of the BMP file to check which parts could have been
 garbled. It seemed that offsets 0xA and 0xE were incorrect.
 
-[Incorrect bytes](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/incorrect-bytes.png)
+![Incorrect bytes](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/incorrect-bytes.png)
 
 For offset 0xA, instead of `36 00 00 00`, they were `BA D0 00 00`.
 For offset 0xE, instead of `28 00 00 00`, they were `BA D0 00 00`.
@@ -48,7 +48,7 @@ able to be displayed, however the flag did not appear.
 I was unable to realise this but, but the next thing to modify was the height
 field in the bitmap header bytes at offset 0x16.
 
-[height bytes](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/height-bytes.png)
+![height bytes](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/height-bytes.png)
 
 The reasoning that would lead you to suspect that the height may be incorrectly set in the file is the fact that
 the image file size is 2.8 MB, but the dimensions are only 1134 x 306, according
@@ -57,4 +57,4 @@ to `exiftool`.
 After setting a larger number for the height, for example, changing `32 01 00 00`
 to `32 03 00 00` (from 306px to 818px), the full image will finally be shown.
 
-[tunnel_vision_completed](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/tunn3l_v1s10n)
+![tunnel_vision_completed](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/tunn3l-v1s10n/tunn3l_v1s10n)
