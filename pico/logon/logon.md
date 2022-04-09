@@ -12,6 +12,5 @@ HTTP GET request contained `admin=False`. I tried naively editing it to be
 set to True, and fortunately the server simply responded with the HTML
 containing the embedded flag.
 
-![get request](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/logon/get-flag-request.png)
-
+![get request screenshot](https://raw.githubusercontent.com/Tymotex/CTFs/master/pico/logon/get-flag-request.png)
 
