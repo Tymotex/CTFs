@@ -1,8 +1,8 @@
-# secedu
+# sec-edu
 
 The following are some key observations I noted when analysing the contents of secedu.txt:
-- All tokens are of length 24
-- All tokens only consist of the *units*, 'sec' and 'edu'. I suspected that these could map to 0s and 1s.
+* All tokens are of length 24
+* All tokens only consist of the *units*, 'sec' and 'edu'. I suspected that these could map to 0s and 1s.
     - Furthermore, I also noted that all of the tokens started with 'sec', which indicated to me that perhaps 'sec' should map to 0 because all valid UTF-8 characters in the ASCII table start with 0.
 
 I then wrote the following Python script to read in the contents
@@ -25,6 +25,7 @@ solve()
 ```
 
 The script produced the following output:
+
 ```
 Wow, you figured it out! Great work! How long it it take for you to figure it out?! I would share with you some extra secrets... but... (sorry) QWggd2VsbCB0aGF0J3Mgbm8gZmFpciEgSGVyZSwganVzdCB0YWtlIHRoZSBzZWNyZXQuIFJlbWVtYmVyIGl0IGlzIGEgc2VjcmV0LCBzbyBrZWVwIGl0IGh1c2ggaHVzaCEgQ09NUDY4NDF7UzNjX0VkdV8xc19jMDBsfQ==
 ```
